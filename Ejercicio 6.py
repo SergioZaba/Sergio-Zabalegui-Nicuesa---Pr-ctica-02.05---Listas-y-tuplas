@@ -5,13 +5,14 @@
 # Al final el programa debe mostrar por pantalla las asignaturas
 # que el usuario tiene que repetir.
 lista_asignaturas = ["Matematicas", "Fisica", "Quimica", "Historia", "Lengua"]
-lista_nota = []
-lista_resultado = []
+aprobadas = []
+
 for i in lista_asignaturas:
-    nota = int(input("Introduzca la nota que a sacado en " + i))
-    lista_nota.append(nota)
-for n in range(len(lista_nota)):
-    if lista_nota[n] < 5:
-        print("En " + lista_asignaturas[n] + " has sacado un " + lista_nota[n])
+    nota = float(input("Introduzca la nota que a sacado en " + i))
+    if nota >= 5:
+        aprobadas.append(i)
+for aprobadas in lista_asignaturas:
+        lista_asignaturas.remove(aprobadas)
+print("Las asiggnaturas que tienes que repetir son=", lista_asignaturas)
 
 
